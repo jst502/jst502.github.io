@@ -71637,7 +71637,8 @@ function TcbLoginStateProvider() {
 function AppWithTcbAndUserContext() {
   var loginState = (0, _react.useContext)(_context3.TcbLoginStateContext);
   if (!loginState) return null;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", null, "success:"), /*#__PURE__*/_react.default.createElement("p", null, "loginType: ", LoginState.loginType), /*#__PURE__*/_react.default.createElement("p", null, "isAnonymousAuth: ", LoginState.isAnonymousAuth), /*#__PURE__*/_react.default.createElement("p", null, "nickName: ", LoginState.user.nickName), /*#__PURE__*/_react.default.createElement("p", null, "username: ", LoginState.user.username), /*#__PURE__*/_react.default.createElement("p", null, "hasPassword: ", LoginState.user.hasPassword));
+  console.log('loginState', loginState);
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", null, "success:"), /*#__PURE__*/_react.default.createElement("ol", null, /*#__PURE__*/_react.default.createElement("li", null, "loginType: ", loginState.loginType), /*#__PURE__*/_react.default.createElement("li", null, "isAnonymousAuth: ", loginState.isAnonymousAuth ? 'true' : 'false'), /*#__PURE__*/_react.default.createElement("li", null, "nickName: ", loginState.user.nickName | '-'), /*#__PURE__*/_react.default.createElement("li", null, "email: ", loginState.user.email), /*#__PURE__*/_react.default.createElement("li", null, "hasPassword: ", loginState.user.hasPassword ? 'true' : 'false')));
 }
 
 function EmailAndPasswordLoginForm(props) {
@@ -71914,7 +71915,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50856" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61539" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
